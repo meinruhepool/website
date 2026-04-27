@@ -35,7 +35,7 @@ export default function AboutSection() {
           </ScrollReveal>
 
           <ScrollReveal className="md:col-span-2 order-1 md:order-2" delay={0.2}>
-            <div className="relative mx-auto max-w-xs">
+            <div className="relative mx-auto max-w-xs z-0">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-secondary flex items-center justify-center">
                 <div className="text-center text-muted-foreground/50">
                   <User className="w-16 h-16 mx-auto mb-3 opacity-40" />
