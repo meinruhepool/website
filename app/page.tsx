@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import Navbar from "../components/praxis/Navbar"
 import HeroSection from "../components/praxis/HeroSection"
