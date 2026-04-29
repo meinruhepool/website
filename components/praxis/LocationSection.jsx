@@ -1,4 +1,5 @@
-import React from "react"
+import { PRACTICE } from "@/lib/constants"
+
 import ScrollReveal from "./ScrollReveal"
 import { MapPin, Clock, Phone, Armchair } from "lucide-react"
 
@@ -27,8 +28,9 @@ export default function LocationSection() {
                     Adresse
                   </h3>
                   <p className="text-sm leading-relaxed font-light text-muted-foreground">
-                    im Gartenkamp 8<br />
-                    49492 Westerkappeln
+                    {PRACTICE.address.street}
+                    <br />
+                    {PRACTICE.address.zip} {PRACTICE.address.city}
                   </p>
                 </div>
               </div>
@@ -42,8 +44,9 @@ export default function LocationSection() {
                     Sprechzeiten
                   </h3>
                   <div className="space-y-1 text-sm font-light text-muted-foreground">
-                    <p>Montag – Donnerstag: 9:00 – 18:00 Uhr</p>
-                    <p>Freitag: 9:00 – 14:00 Uhr</p>
+                    {PRACTICE.hours.weekdays.map((item, index) => (
+                      <p key={"weekdays_" + index}>{item}</p>
+                    ))}
                     <p className="mt-2 text-xs italic">
                       Termine nach Vereinbarung
                     </p>
@@ -61,10 +64,10 @@ export default function LocationSection() {
                   </h3>
                   <p className="text-sm font-light text-muted-foreground">
                     <a
-                      href="tel:+491709881800"
+                      href={"tel:" + PRACTICE.phone.value}
                       className="transition-colors hover:text-primary"
                     >
-                      +49 170 9881800
+                      {PRACTICE.phone.preview}
                     </a>
                   </p>
                 </div>
@@ -96,7 +99,7 @@ export default function LocationSection() {
             <div className="overflow-hidden rounded-2xl border border-border shadow-sm">
               <iframe
                 title="Praxis Standort in Westerkappeln"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=7.85%2C52.30%2C7.90%2C52.33&layer=mapnik&marker=52.315%2C7.875"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=7.885624766349793%2C52.311072915757435%2C7.892394661903382%2C52.3137031300162&amp;layer=mapnik&amp;marker=52.312388042423336%2C7.889009714126587"
                 width="100%"
                 height="380"
                 style={{ border: 0 }}
