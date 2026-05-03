@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react"
+
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
-import ButterflyLogo from "./ButterflyLogo"
-import Link from "next/link"
+
+import Logo from "@/components/Logo"
+
+// import ButterflyLogo from "./ButterflyLogo"
+// import Logo from "../Logo"
 
 const navLinks = [
   { label: "Über mich", href: "#ueber-mich" },
@@ -62,21 +66,7 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href={"/"} className="relative z-10 flex items-center gap-2">
-          <ButterflyLogo
-            size={32}
-            className={`absolute -top-1 left-3 duration-500 ${
-              scrolled ? "text-primary" : "text-white"
-            }`}
-          />
-          <span
-            className={`pt-3.5 pl-8 text-lg font-semibold transition-colors duration-500 ${
-              scrolled ? "text-primary" : "text-white"
-            }`}
-          >
-            mein Ruhepol
-          </span>
-        </Link>
+        <Logo size={32} scrolled={scrolled} />
 
         {/* Desktop nav */}
         <ul className="hidden items-center gap-8 md:flex">

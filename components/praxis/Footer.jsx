@@ -1,6 +1,8 @@
 import Link from "next/link"
 
-import ButterflyLogo from "./ButterflyLogo"
+import { PRACTICE } from "@/lib/constants"
+
+import Logo from "@/components/Logo"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -12,15 +14,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4 flex items-center gap-2">
-              <ButterflyLogo size={28} color="rgba(255,255,255,0.7)" />
-              <span className="font-serif text-lg text-primary-foreground/90">
-                Ihr Ruhepol
-              </span>
+              <Logo size={32} />
             </div>
             <p className="text-sm leading-relaxed font-light text-primary-foreground/50">
-              Psychotherapie in Westerkappeln.
+              {PRACTICE.fullName}
               <br />
-              Ein sicherer Raum für Ihre persönliche Entfaltung.
+              <span className="italic">„{PRACTICE.slogan}“</span>
             </p>
           </div>
 
@@ -81,7 +80,7 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/10 pt-8 text-center">
           <p className="text-xs font-light text-primary-foreground/35">
-            © {currentYear} Ihr Ruhepol — Psychotherapie in Westerkappeln. Alle
+            © {currentYear} {PRACTICE.name} — {PRACTICE.fullName} Alle
             Rechte vorbehalten.
           </p>
         </div>
