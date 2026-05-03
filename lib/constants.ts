@@ -1,6 +1,7 @@
 export const PRACTICE = {
   name: "Mein Ruhepol",
-  fullName: "Heilpraktikerin für Psychotherapie in Westerkappeln",
+  fullName: "Heilpraktikerin für Psychotherapie in Westerkappeln.",
+  slogan: "Entfalten Sie sich. Werden Sie, wer Sie wirklich sind.",
   doctorName: "Gabriele Freese",
 
   email: "freese@meinruhepol.de",

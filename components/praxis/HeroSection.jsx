@@ -92,7 +92,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 1.0 }}
           className="mx-auto max-w-xl text-base font-light text-white/65 italic sm:text-lg"
         >
-          „Entfalten Sie sich. Werden Sie, wer Sie wirklich sind."
+          „{PRACTICE.slogan}“
         </motion.p>
 
         <motion.div
