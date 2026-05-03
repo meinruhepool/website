@@ -1,28 +1,32 @@
-import React from "react";
-import ButterflyLogo from "./ButterflyLogo";
+import Link from "next/link"
+
+import ButterflyLogo from "./ButterflyLogo"
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
 
   return (
     <footer className="bg-foreground text-primary-foreground/80">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16">
-        <div className="grid sm:grid-cols-3 gap-10 mb-12">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <div className="mb-12 grid gap-10 sm:grid-cols-3">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="mb-4 flex items-center gap-2">
               <ButterflyLogo size={28} color="rgba(255,255,255,0.7)" />
-              <span className="font-serif text-lg text-primary-foreground/90">Ihr Ruhepol</span>
+              <span className="font-serif text-lg text-primary-foreground/90">
+                Ihr Ruhepol
+              </span>
             </div>
-            <p className="text-sm font-light text-primary-foreground/50 leading-relaxed">
-              Psychotherapie in Westerkappeln.<br />
+            <p className="text-sm leading-relaxed font-light text-primary-foreground/50">
+              Psychotherapie in Westerkappeln.
+              <br />
               Ein sicherer Raum für Ihre persönliche Entfaltung.
             </p>
           </div>
 
           {/* Quick links */}
           <div>
-            <h4 className="text-sm font-medium text-primary-foreground/70 mb-4 tracking-wide uppercase">
+            <h4 className="mb-4 text-sm font-medium tracking-wide text-primary-foreground/70 uppercase">
               Navigation
             </h4>
             <ul className="space-y-2.5">
@@ -35,8 +39,12 @@ export default function Footer() {
               ].map((link) => (
                 <li key={link.href}>
                   <button
-                    onClick={() => document.querySelector(link.href)?.scrollIntoView({ behavior: "smooth" })}
-                    className="text-sm font-light text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors"
+                    onClick={() =>
+                      document
+                        .querySelector(link.href)
+                        ?.scrollIntoView({ behavior: "smooth" })
+                    }
+                    className="text-sm font-light text-primary-foreground/50 transition-colors hover:text-primary-foreground/80"
                   >
                     {link.label}
                   </button>
@@ -47,19 +55,25 @@ export default function Footer() {
 
           {/* Legal */}
           <div>
-            <h4 className="text-sm font-medium text-primary-foreground/70 mb-4 tracking-wide uppercase">
+            <h4 className="mb-4 text-sm font-medium tracking-wide text-primary-foreground/70 uppercase">
               Rechtliches
             </h4>
             <ul className="space-y-2.5">
               <li>
-                <a href="#impressum" className="text-sm font-light text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors">
+                <Link
+                  href="/impressum"
+                  className="text-sm font-light text-primary-foreground/50 transition-colors hover:text-primary-foreground/80"
+                >
                   Impressum
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#datenschutz-page" className="text-sm font-light text-primary-foreground/50 hover:text-primary-foreground/80 transition-colors">
-                  Datenschutzerklärung
-                </a>
+                <Link
+                  href="/privacy-policy"
+                  className="text-sm font-light text-primary-foreground/50 transition-colors hover:text-primary-foreground/80"
+                >
+                  Datenschutz
+                </Link>
               </li>
             </ul>
           </div>
@@ -67,10 +81,11 @@ export default function Footer() {
 
         <div className="border-t border-primary-foreground/10 pt-8 text-center">
           <p className="text-xs font-light text-primary-foreground/35">
-            © {currentYear} Ihr Ruhepol — Psychotherapie in Westerkappeln. Alle Rechte vorbehalten.
+            © {currentYear} Ihr Ruhepol — Psychotherapie in Westerkappeln. Alle
+            Rechte vorbehalten.
           </p>
         </div>
       </div>
     </footer>
-  );
+  )
 }
