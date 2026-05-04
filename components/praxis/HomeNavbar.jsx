@@ -44,7 +44,10 @@ export default function HomeNavbar({ navLinks, onNavLinkClick }) {
 
   const handleClick = (href) => {
     setMobileOpen(false)
-    onNavLinkClick(href)
+
+    setTimeout(() => {
+      onNavLinkClick(href)
+    }, 100)
   }
 
   return (
