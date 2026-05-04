@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Link from "next/link"
 import { Mail, Phone, Send, Loader2 } from "lucide-react"
 import { toast } from "sonner"
 import { PRACTICE } from "@/lib/constants"
@@ -115,15 +116,15 @@ export default function ContactSection() {
                 />
                 <Label
                   htmlFor="datenschutz"
-                  className="cursor-pointer text-sm leading-relaxed font-light text-muted-foreground block"
+                  className="block cursor-pointer text-sm leading-relaxed font-light text-muted-foreground"
                 >
                   Ich habe die{" "}
-                  <a
-                    href="#datenschutz-page"
+                  <Link
+                    href="/privacy-policy"
                     className="text-primary underline underline-offset-2 hover:opacity-80"
                   >
                     Datenschutzerklärung
-                  </a>{" "}
+                  </Link>{" "}
                   gelesen und stimme der Verarbeitung meiner Daten zur
                   Kontaktaufnahme zu. *
                 </Label>
@@ -180,9 +181,7 @@ export default function ContactSection() {
                         strokeWidth={1.5}
                       />
                     </div>
-                    <span className="text-sm font-light">
-                      {PRACTICE.email}
-                    </span>
+                    <span className="text-sm font-light">{PRACTICE.email}</span>
                   </a>
                 </div>
               </div>
