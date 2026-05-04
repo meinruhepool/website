@@ -25,7 +25,7 @@ export const PRACTICE = {
   },
 
   social: {
-    instagram: "https://instagram.com/ihr-ruhepol",
+    instagram: "https://instagram.com/meinruhepol",
     facebook: "",
   },
 
@@ -33,7 +33,7 @@ export const PRACTICE = {
     title: "Mein Ruhepol – Heilpraktikerin für Psychotherapie in Westerkappeln",
     description:
       "Hypnosetherapie, Entspannungsverfahren und Coaching in Westerkappeln. Ihr persönlicher Ruhepol – einfühlsam, professionell, individuell.",
-    url: "https://www.ihr-ruhepol.de",
+    url: "https://www.meinruhepol.de",
     locale: "de_DE",
     keywords: [
       //
@@ -79,5 +79,5 @@ export const PRACTICE = {
     publisher: "Gabriele Freese",
   },
 
-  domain: "meinruhepol.de",
+  domain: "milk-2-dev.github.io/meinruhepol"//"meinruhepol.de",
 } as const

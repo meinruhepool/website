@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: PRACTICE.name,
     images: [
       {
-        url: "https://meinruhepol.de/og-image.png",
+        url: `https://${PRACTICE.domain}/og-image.png`,
         width: 1200,
         height: 630,
       },
@@ -47,21 +47,21 @@ export const metadata: Metadata = {
   //   },
   // },
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: `https://${PRACTICE.domain}/favicon.ico`,
+    shortcut: `https://${PRACTICE.domain}/favicon-16x16.png`,
+    apple: `https://${PRACTICE.domain}/apple-touch-icon.png`,
     other: {
       rel: "apple-touch-icon",
-      url: "/apple-touch-icon.png",
+      url: `https://${PRACTICE.domain}/apple-touch-icon.png`,
     },
   },
   robots: {
-    index: true,
-    follow: true,
-    nocache: false,
+    index: false,
+    follow: false,
+    nocache: true,
     googleBot: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
