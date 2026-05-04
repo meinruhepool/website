@@ -7,7 +7,7 @@ import ServicesSection from "../components/praxis/ServicesSection"
 import PhilosophySection from "../components/praxis/PhilosophySection"
 import LocationSection from "../components/praxis/LocationSection"
 import ContactSection from "../components/praxis/ContactSection"
-import Footer from "../components/praxis/Footer"
+import HomeFooter from "../components/praxis/HomeFooter"
 
 export default function Page() {
   const navLinks = [
@@ -34,7 +34,7 @@ export default function Page() {
         <LocationSection />
         <ContactSection />
       </main>
-      <Footer />
+      <HomeFooter navLinks={navLinks} onNavLinkClick={onNavLinkClick} />
     </div>
   )
 }
