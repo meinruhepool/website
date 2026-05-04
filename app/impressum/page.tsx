@@ -16,7 +16,7 @@ export default function Impressum() {
         <div className="space-y-8 leading-relaxed font-light text-muted-foreground">
           <section>
             <h2 className="mb-3 font-serif text-xl text-foreground">
-              Angaben gemäß § 5 TMG
+              Angaben gemäß §5 TMG
             </h2>
             <p>
               <strong className="font-medium text-foreground">
