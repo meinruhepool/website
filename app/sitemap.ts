@@ -1,3 +1,5 @@
+export const dynamic = 'force-static'
+
 import { PRACTICE } from '@/lib/constants'
 import type { MetadataRoute } from 'next'
  
