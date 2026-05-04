@@ -1,0 +1,2 @@
+:HL["/meinruhepol/_next/static/chunks/51d1ff758b29696f.css","style"]
+0:{"buildId":"Vf_u9h8qtr04AsWF_yAn6","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}
