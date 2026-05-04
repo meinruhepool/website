@@ -19,17 +19,21 @@ export default function ContactSection() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     if (!agreed) {
-      toast.error("Bitte stimmen Sie der Datenschutzerklärung zu.")
+      toast.error("Bitte stimmen Sie der Datenschutzerklärung zu.", {
+        position: "top-center",
+      })
       return
     }
     if (!form.name || !form.email || !form.message) {
-      toast.error("Bitte füllen Sie alle Felder aus.")
+      toast.error("Bitte füllen Sie alle Felder aus.", { position: "top-center" })
       return
     }
     setSending(true)
     // Simulate sending
     await new Promise((r) => setTimeout(r, 1200))
-    toast.success("Vielen Dank! Ihre Nachricht wurde gesendet.")
+    toast.success("Vielen Dank! Ihre Nachricht wurde gesendet.", {
+      position: "top-center",
+    })
     setForm({ name: "", email: "", message: "" })
     setAgreed(false)
     setSending(false)
