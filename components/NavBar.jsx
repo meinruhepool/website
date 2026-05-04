@@ -108,12 +108,12 @@ export default function Navbar() {
             <ul className="flex flex-col gap-1 px-6 py-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
-                  <button
-                    onClick={() => handleClick(link.href)}
+                  <Link
+                    href={link.href}
                     className="w-full border-b border-border/50 py-3 text-left text-sm font-light tracking-wide text-foreground last:border-0"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

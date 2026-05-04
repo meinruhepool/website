@@ -10,12 +10,12 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-background font-sans antialiased">
       <MainNavbar />
       <main className="mx-auto max-w-3xl px-4 pt-32 pb-24 sm:px-6">
-        <h1 className="mb-2 font-serif text-4xl text-foreground">
+        <h2 className="mb-2 font-serif text-3xl text-foreground sm:text-4xl">
           Datenschutzerklärung
-        </h1>
+        </h2>
         <div className="mb-10 h-px w-12 bg-primary/40" />
 
-        <div className="prose prose-sm max-w-none space-y-8 leading-relaxed font-light text-muted-foreground">
+        <div className="prose prose-sm max-w-none space-y-8 leading-relaxed font-light text-foreground/80">
           <section>
             <h2 className="mb-3 font-serif text-xl text-foreground">
               1. Verantwortliche Stelle
