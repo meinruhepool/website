@@ -12,6 +12,11 @@ export default function HomeNavbar({ navLinks, onNavLinkClick }) {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
+
+    if (!scrolled && window.scrollY > 40) {
+      setScrolled(true)
+    }
+
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
