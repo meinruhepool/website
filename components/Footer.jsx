@@ -29,13 +29,7 @@ export default function Footer() {
               Navigation
             </h4>
             <ul className="space-y-2.5">
-              {[
-                { label: "Über mich", href: "#ueber-mich" },
-                { label: "Leistungen", href: "#leistungen" },
-                { label: "Ansatz", href: "#ansatz" },
-                { label: "Praxis", href: "#praxis" },
-                { label: "Kontakt", href: "#kontakt" },
-              ].map((link) => (
+              {[{ label: "Startseite", href: "/" }].map((link) => (
                 <li key={link.href}>
                   <Link
                     href={`/${link.href}`}

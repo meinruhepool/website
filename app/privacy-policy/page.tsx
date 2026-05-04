@@ -2,8 +2,8 @@
 
 import { PRACTICE } from "../../lib/constants"
 
-import MainNavbar from "../../components/MainNavBar"
-import Footer from "../../components/praxis/Footer"
+import MainNavbar from "../../components/NavBar"
+import Footer from "../../components/Footer"
 
 export default function PrivacyPolicy() {
   return (

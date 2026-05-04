@@ -2,13 +2,13 @@
 
 import { PRACTICE } from "../../lib/constants"
 
-import MainNavbar from "../../components/MainNavBar"
-import Footer from "../../components/praxis/Footer"
+import Navbar from "../../components/NavBar"
+import Footer from "../../components/Footer"
 
 export default function Impressum() {
   return (
     <div className="min-h-screen bg-background font-sans antialiased">
-      <MainNavbar />
+      <Navbar />
       <main className="mx-auto max-w-3xl px-4 pt-32 pb-24 sm:px-6">
         <h1 className="mb-2 font-serif text-4xl text-foreground">Impressum</h1>
         <div className="mb-10 h-px w-12 bg-primary/40" />
