@@ -2,12 +2,7 @@
 const nextConfig = {
   output: "export",
   images: {
-    localPatterns: [
-      {
-        pathname: "/meinruhepol/images/**",
-        search: "",
-      },
-    ],
+    unoptimized: true,
   },
   distDir: "dist",
   basePath: "/meinruhepol",
