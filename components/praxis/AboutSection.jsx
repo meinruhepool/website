@@ -1,6 +1,9 @@
+import Image from "next/image"
+
+import { User } from "lucide-react"
+
 import { PRACTICE } from "@/lib/constants"
 import ScrollReveal from "./ScrollReveal"
-import { User } from "lucide-react"
 
 export default function AboutSection() {
   return (
@@ -49,10 +52,17 @@ export default function AboutSection() {
             <div className="relative z-0 mx-auto max-w-xs">
               <div className="flex aspect-[3/4] items-center justify-center overflow-hidden rounded-2xl bg-secondary">
                 <div className="text-center text-muted-foreground/50">
-                  <User className="mx-auto mb-3 h-16 w-16 opacity-40" />
+                  <Image
+                    src="/img/author.jpg"
+                    alt="Picture of the author"
+                    fill
+                    style={{ objectFit: "cover" }}
+                    sizes="(max-width: 768px) 100vw, 320px"
+                  />
+                  {/* <User className="mx-auto mb-3 h-16 w-16 opacity-40" />
                   <p className="text-xs font-light tracking-wide">
                     Foto Platzhalter
-                  </p>
+                  </p> */}
                 </div>
               </div>
               {/* Decorative accent */}
