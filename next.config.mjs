@@ -2,11 +2,16 @@
 const nextConfig = {
   output: "export",
   images: {
-    unoptimized: true,
+    localPatterns: [
+      {
+        pathname: "/meinruhepol/images/**",
+        search: "",
+      },
+    ],
   },
-  distDir: 'dist',
+  distDir: "dist",
   basePath: "/meinruhepol",
-  assetPrefix: '/meinruhepol',
+  assetPrefix: "/meinruhepol",
 }
 
 export default nextConfig
