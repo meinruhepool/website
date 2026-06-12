@@ -53,7 +53,7 @@ export default function AboutSection() {
               <div className="flex aspect-[3/4] items-center justify-center overflow-hidden rounded-2xl bg-secondary">
                 <div className="text-center text-muted-foreground/50">
                   <Image
-                    src="/website/images/author.jpg"
+                    src="/images/author.jpg"
                     alt="Picture of the author"
                     fill
                     style={{ objectFit: "cover" }}

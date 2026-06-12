@@ -5,8 +5,8 @@ const nextConfig = {
     unoptimized: true,
   },
   distDir: "dist",
-  basePath: "/website",
-  assetPrefix: "/website",
+  // basePath: "/website",
+  // assetPrefix: "/website",
 }
 
 export default nextConfig
