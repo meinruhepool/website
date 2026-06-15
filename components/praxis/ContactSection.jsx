@@ -25,18 +25,49 @@ export default function ContactSection() {
       return
     }
     if (!form.name || !form.email || !form.message) {
-      toast.error("Bitte füllen Sie alle Felder aus.", { position: "top-center" })
+      toast.error("Bitte füllen Sie alle Felder aus.", {
+        position: "top-center",
+      })
       return
     }
     setSending(true)
-    // Simulate sending
-    await new Promise((r) => setTimeout(r, 1200))
-    toast.success("Vielen Dank! Ihre Nachricht wurde gesendet.", {
-      position: "top-center",
-    })
-    setForm({ name: "", email: "", message: "" })
-    setAgreed(false)
-    setSending(false)
+
+    try {
+      const formData = {
+        access_key: "0285891c-2d86-4b23-81e7-e9d201d94f17",
+        ...form,
+      }
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        toast.success("Vielen Dank! Ihre Nachricht wurde gesendet.", {
+          position: "top-center",
+        })
+
+        setForm({ name: "", email: "", message: "" })
+      } else {
+        toast.error(data.message, {
+          position: "top-center",
+        })
+      }
+    } catch (error) {
+      toast.error(
+        "Es gab ein Problem beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.",
+        {
+          position: "top-center",
+        }
+      )
+    } finally {
+      setAgreed(false)
+      setSending(false)
+    }
   }
 
   return (
