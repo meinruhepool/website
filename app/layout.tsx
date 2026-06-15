@@ -56,12 +56,12 @@ export const metadata: Metadata = {
     },
   },
   robots: {
-    index: false,
-    follow: false,
-    nocache: true,
+    index: true,
+    follow: true,
+    nocache: false,
     googleBot: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
       noimageindex: false,
       "max-video-preview": -1,
       "max-image-preview": "large",
