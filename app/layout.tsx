@@ -13,6 +13,9 @@ export const metadata: Metadata = {
   description: PRACTICE.seo.description,
   keywords: PRACTICE.seo.keywords.join(", "),
   metadataBase: new URL(`https://${PRACTICE.domain}`),
+  other: {
+    "google-site-verification": "mZ_9pIrz9cD5c9VtY6eGZdmZjZpkwR1VLK7w2FK3tws",
+  },
   alternates: {
     canonical: "/",
     languages: {
