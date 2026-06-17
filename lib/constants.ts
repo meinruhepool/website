@@ -79,5 +79,5 @@ export const PRACTICE = {
     publisher: "Gabriele Freese",
   },
 
-  domain: "milk-2-dev.github.io/meinruhepol"//"meinruhepol.de",
+  domain: "meinruhepol.de",
 } as const
