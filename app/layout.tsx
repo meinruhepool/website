@@ -99,6 +99,13 @@ export default function RootLayout({
       <body>
         <ThemeProvider>{children}</ThemeProvider>
         <Toaster />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(PRACTICE.seo.jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
       </body>
     </html>
   )

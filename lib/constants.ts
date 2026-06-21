@@ -77,6 +77,33 @@ export const PRACTICE = {
     authors: [{ name: "Gabriele Freese" }],
     creator: "Gabriele Freese",
     publisher: "Gabriele Freese",
+    jsonLd: {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "Mein Ruhepol",
+      image: "https://meinruhepol.de/images/logo.png",
+      telephone: "+491709881800",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Gartenkamp 8",
+        addressLocality: "Westerkappeln",
+        addressCountry: "DE",
+      },
+      openingHoursSpecification: [
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Montag", "Dienstag", "Mittwoch", "Donnerstag"],
+          opens: "09:00",
+          closes: "18:00",
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          dayOfWeek: ["Freitag"],
+          opens: "09:00",
+          closes: "14:00",
+        },
+      ]
+    },
   },
 
   domain: "meinruhepol.de",
