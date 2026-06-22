@@ -50,12 +50,16 @@ export const metadata: Metadata = {
   //   },
   // },
   icons: {
-    icon: `https://${PRACTICE.domain}/favicon.ico`,
+    icon: [
+      `https://${PRACTICE.domain}/favicon.ico`,
+      `https://${PRACTICE.domain}/favicon-32x32.png`,
+    ],
     shortcut: `https://${PRACTICE.domain}/favicon-16x16.png`,
     apple: `https://${PRACTICE.domain}/apple-touch-icon.png`,
     other: {
-      rel: "apple-touch-icon",
-      url: `https://${PRACTICE.domain}/apple-touch-icon.png`,
+      rel: "icon",
+      type: "image/svg+xml",
+      url: `https://${PRACTICE.domain}/images/logo.svg`,
     },
   },
   robots: {
@@ -103,7 +107,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(PRACTICE.seo.jsonLd).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(PRACTICE.seo.jsonLd).replace(
+              /</g,
+              "\\u003c"
+            ),
           }}
         />
       </body>
