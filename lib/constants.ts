@@ -81,7 +81,7 @@ export const PRACTICE = {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       name: "Mein Ruhepol",
-      image: "https://meinruhepol.de/images/logo.png",
+      image: "https://meinruhepol.de/images/search_google_preview.png",
       telephone: "+491709881800",
       address: {
         "@type": "PostalAddress",
